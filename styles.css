@@ -2,8 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
-
+* {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
 body {
     display: flex;
     align-items: center;
@@ -54,11 +61,12 @@ body {
 
 .day.locked {
     background-color: #d9b3b3;
-    cursor: default;
+    cursor:not-allowed;
 }
 
 .day.unlocked {
     background-color: #ff99cc;
+    cursor:pointer;
 }
 
 .day.unlocked:hover {
@@ -70,6 +78,7 @@ body {
     background-color: #ffd1dc;
     grid-column: span 5; /* Ocupa una fila completa */
     height: 100px; /* Fijo y 25% más alto */
+    cursor: wait;
 }
 
 /* Estilo para los días desbloqueados sin abrir */
@@ -95,6 +104,13 @@ body {
     box-shadow: none;
     color: #fff;
     font-weight: bold;
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,0.61) inset;
+-webkit-box-shadow: 6px 6px 0px 0px rgba(0,0,0,0.61) inset;
+-moz-box-shadow: 6px 6px 0px 0px rgba(0,0,0,0.61) inset;
+
+}
+.day.unlocked.clicked{
+    font-size: 15px;
 }
 
 /* Animación de brillo */
@@ -161,26 +177,5 @@ body {
 
 /* Lista de días accedidos */
 .accessed-days {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #ffe6e6;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.accessed-days h2 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #ff4d94;
-}
-
-.accessed-days ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.accessed-days li {
-    font-size: 1rem;
-    color: #333;
-    margin: 5px 0;
+    display: none;
 }
