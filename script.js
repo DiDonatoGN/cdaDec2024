@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 // Redirigir a la página del día
-                window.location.href = `dia${day}.html`;
+                window.location.href = `./dias/dia${day}.html`;
             };
         } else if (dayDate.toDateString() === currentDate.toDateString()) {
             dayElement.textContent = day;
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateAccessedDaysList();
 
                 // Redirigir a la página del día
-                window.location.href = `dia${day}.html`;
+                window.location.href = `./dias/dia${day}.html`;
             };
         } else if (dayDate > currentDate) {
             if (!document.querySelector(".countdown")) {
