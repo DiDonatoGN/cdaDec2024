@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const accessedDaysList = document.getElementById("accessed-days-list");
     const currentDate = new Date();
     const year = 2024;
-    const month = 10; // Noviembre (mes 10 para pruebas)
+    const month = 11; // Noviembre (mes 10 para pruebas)
 
     // Funciones para manejar Local Storage
     function getAccessedDays() {
@@ -60,10 +60,21 @@ document.addEventListener("DOMContentLoaded", () => {
                     setAccessedDays(accessedDays);
                     updateAccessedDaysList();
                 }
+
+                // Redirigir a la página del día
+                window.location.href = `dia${day}.html`;
             };
         } else if (dayDate.toDateString() === currentDate.toDateString()) {
             dayElement.textContent = day;
             dayElement.classList.add("unlocked");
+            dayElement.onclick = () => {
+                accessedDays.push(day);
+                setAccessedDays(accessedDays);
+                updateAccessedDaysList();
+
+                // Redirigir a la página del día
+                window.location.href = `dia${day}.html`;
+            };
         } else if (dayDate > currentDate) {
             if (!document.querySelector(".countdown")) {
                 dayElement.classList.add("countdown");
@@ -77,12 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         dayElement.classList.remove("countdown");
                         dayElement.classList.add("unlocked");
                         dayElement.onclick = () => {
-                            dayElement.classList.add("clicked");
-                            if (!accessedDays.includes(day)) {
-                                accessedDays.push(day);
-                                setAccessedDays(accessedDays);
-                                updateAccessedDaysList();
-                            }
+                            accessedDays.push(day);
+                            setAccessedDays(accessedDays);
+                            updateAccessedDaysList();
+
+                            // Redirigir a la página del día
+                            window.location.href = `dia${day}.html`;
                         };
                     } else {
                         const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
