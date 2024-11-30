@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffe6e6;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 10px;
+
+background-image: url('../src/images/carta.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 80vh;
+  background-position: center;
+
+  font-family: "Borel", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.renglon div{
+    display: block;
+    background-color: aqua;
+    float: left;
+    position: sticky;
+}
+.renglon p{
+    font-size: 150%;
+    font-weight: 100;
+    line-height: 50%;
+    padding-left: 15px;
+
+}
+.renglon h1{
+    text-align: center;
+}
