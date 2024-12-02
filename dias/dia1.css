@@ -34,3 +34,24 @@ background-image: url('../src/images/carta.png');
 .renglon h1{
     text-align: center;
 }
+
+#back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff99cc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 15;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#back-button:hover {
+  background-color: #ff6699;
+}
+
