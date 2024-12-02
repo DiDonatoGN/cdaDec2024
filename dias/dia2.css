@@ -38,7 +38,7 @@ body {
 /* Lupa */
 .draggable {
   position: absolute;
-  width: 300px;
+  width: 400px;
   cursor: grab;
   z-index: 10; /* Siempre sobre las pantallas */
 }
@@ -56,5 +56,5 @@ body {
   opacity: 50%;
 }
 #playlist{
-  width: 150px;
+  width: 200px;
 }
