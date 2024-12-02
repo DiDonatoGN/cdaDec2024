@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             updateAccessedDaysList();
 
                             // Redirigir a la página del día
-                            window.location.href = `dia${day}.html`;
+                            window.location.href = `./dias/dia${day}.html`;
                         };
                     } else {
                         const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
