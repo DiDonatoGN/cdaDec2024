@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background-color: #ffe6e6;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Botón de navegación */
+#back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff99cc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 15;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#back-button:hover {
+  background-color: #ff6699;
+}
+
+/* Pantallas */
+.screen {
+  position: absolute;
+  background-color: #ffe6e6;
+  z-index: 5; /* Encima de las imágenes ocultas */
+  pointer-events: none; /* Permitir interacción con la lupa */
+}
+
+/* Lupa */
+.draggable {
+  position: absolute;
+  width: 300px;
+  cursor: grab;
+  z-index: 10; /* Siempre sobre las pantallas */
+}
+
+/* Imágenes ocultas */
+.hidden {
+  position: absolute;
+  opacity: 0;
+}
+#dos {
+  width: 100px;
+}
+#rayo {
+  width: 100px;
+  opacity: 50%;
+}
+#playlist{
+  width: 150px;
+}

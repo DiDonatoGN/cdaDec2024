@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Día 2</title>
+  <link rel="stylesheet" href="dia2.css">
+</head>
+<body>
+  <!-- Botón de navegación -->
+  <button id="back-button"><</button>
+
+  <!-- Pantallas que cubren todo excepto la lupa -->
+  <div id="top-screen" class="screen"></div>
+  <div id="left-screen" class="screen"></div>
+  <div id="right-screen" class="screen"></div>
+  <div id="bottom-screen" class="screen"></div>
+
+  <!-- Lupa y las imágenes ocultas -->
+  <img src="../src/images/Lupa.png" alt="Lupa" class="draggable" id="draggable">
+  <img src="../src/images/Rayo.png" alt="Rayo" class="hidden" class="secret"  id="rayo">
+  <img src="../src/images/Dos.png" alt="Dos" class="hidden" class="secret" id="dos">
+  <img src="../src/images/Playlist.png" alt="Playlist" class="hidden" id="playlist">
+  <script src="dia2.js"></script>
+</body>
+</html>
