@@ -12,7 +12,7 @@ const today = new Date().toISOString().split('T')[0]; // Obtener la fecha actual
 const savedData = JSON.parse(localStorage.getItem('origamiData')) || {};
 if (!savedData.date || savedData.date !== today) {
     savedData.date = today;
-    savedData.group = ['A'][Math.floor(Math.random() * 4)]; // Grupo aleatorio
+    savedData.group = ['A', 'B'][Math.floor(Math.random() * 4)]; // Grupo aleatorio
     savedData.step = 1; // Reiniciar al paso 1
     localStorage.setItem('origamiData', JSON.stringify(savedData));
 }
