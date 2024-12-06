@@ -1,0 +1,142 @@
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff99cc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 15;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#back-button:hover {
+    background-color: #ff6699;
+}
+
+body {
+    margin: 0;
+    background-color: #ffe6e6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#symbols-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ff99cc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.symbol-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.symbol {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+}
+
+#check-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff99cc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#check-button:hover {
+    background-color: #ff6699;
+}
+
+/* Botón de pista */
+#hint-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff99cc;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+#hint-button img {
+    width: 60%;
+    height: 60%;
+}
+
+/* Modal */
+#hint-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 25;
+}
+
+#hint-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#hint-content img {
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+#hint-text {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Ocultar el modal por defecto */
+.hidden {
+    display: none;
+}

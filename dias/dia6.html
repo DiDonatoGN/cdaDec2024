@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 6</title>
+    <link rel="stylesheet" href="dia6.css">
+    <link rel="icon" href="../src/favicon.svg">
+</head>
+
+<body>
+    <button id="back-button"> < </button>
+    <!-- Botón de pista -->
+    <button id="hint-button">
+        <img src="../src/icons/question.svg" alt="Pista" style="width: 30px; height: 30px;">
+    </button>
+    
+    <!-- Modal para mostrar las pistas -->
+    <div id="hint-modal" class="hidden">
+        <div id="hint-content">
+            <img id="hint-image" src="" alt="Pista">
+            <p id="hint-text"></p>
+        </div>
+    </div>
+    
+    <div id="container">
+        <div id="symbols-box">
+            <div class="symbol-container">
+                <img src="../src/images/dia6/flechasuperior.png" class="arrow arrow-up">
+                <img src="../src/images/dia6/SDefault.png" class="symbol" id="symbol-1">
+                <img src="../src/images/dia6/flechainferior.png" class="arrow arrow-down">
+            </div>
+            <div class="symbol-container">
+                <img src="../src/images/dia6/flechasuperior.png" class="arrow arrow-up">
+                <img src="../src/images/dia6/SDefault.png" class="symbol" id="symbol-2">
+                <img src="../src/images/dia6/flechainferior.png" class="arrow arrow-down">
+            </div>
+            <div class="symbol-container">
+                <img src="../src/images/dia6/flechasuperior.png" class="arrow arrow-up">
+                <img src="../src/images/dia6/SDefault.png" class="symbol" id="symbol-3">
+                <img src="../src/images/dia6/flechainferior.png" class="arrow arrow-down">
+            </div>
+            <div class="symbol-container">
+                <img src="../src/images/dia6/flechasuperior.png" class="arrow arrow-up">
+                <img src="../src/images/dia6/SDefault.png" class="symbol" id="symbol-4">
+                <img src="../src/images/dia6/flechainferior.png" class="arrow arrow-down">
+            </div>
+        </div>
+        <button id="check-button">Intentar</button>
+    </div>
+
+    <script src="dia6.js"></script>
+</body>
+
+</html>
