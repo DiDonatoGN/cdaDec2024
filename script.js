@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const accessedDaysList = document.getElementById("accessed-days-list");
     const currentDate = new Date();
     const year = 2024;
-    const month = 10; // Noviembre (mes 10 para pruebas)
+    const month = 11; // Noviembre (mes 10 para pruebas)
 
     // Funciones para manejar Local Storage
     function getAccessedDays() {
