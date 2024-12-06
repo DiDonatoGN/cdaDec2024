@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const accessedDaysList = document.getElementById("accessed-days-list");
     const currentDate = new Date();
     const year = 2024;
-    const month = 11; // Noviembre (mes 10 para pruebas)
+    const month = 10; // Noviembre (mes 10 para pruebas)
 
     // Funciones para manejar Local Storage
     function getAccessedDays() {
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             updateAccessedDaysList();
 
                             // Redirigir a la página del día
-                            window.location.href = `./dias/dia${day}.html`;
+                            window.location.href = `dia${day}.html`;
                         };
                     } else {
                         const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
@@ -119,5 +119,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         calendarDaysContainer.appendChild(dayElement);
+    }
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const albumUnlocked = localStorage.getItem('albumUnlocked');
+
+    if (albumUnlocked) {
+        // Crear el botón para el álbum
+        const albumButton = document.createElement('button');
+        albumButton.id = 'album-button';
+        albumButton.title = 'Ir al álbum';
+        albumButton.innerHTML = '<img src="./src/icons/album.svg" alt="Álbum" />';
+        
+        albumButton.addEventListener('click', () => {
+            window.location.href = './dias/album.html'; // Redirigir al álbum
+        });
+
+        // Agregar el botón al cuerpo del índice
+        document.body.appendChild(albumButton);
     }
 });

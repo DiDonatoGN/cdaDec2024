@@ -179,3 +179,30 @@ body {
 .accessed-days {
     display: none;
 }
+#album-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ff99cc;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+#album-button:hover {
+    background-color: #ff80b3;
+    transform: scale(1.1);
+}
+
+#album-button img {
+    width: 70%;
+    height: 70%;
+}
