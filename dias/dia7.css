@@ -1,0 +1,58 @@
+/* Botón de retroceso */
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff99cc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 15;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#back-button:hover {
+    background-color: #ff6699;
+}
+
+/* General del cuerpo */
+body {
+    margin: 0;
+    background-color: #ffe6e6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+#container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    background-color: #ff99cc;
+    border: 2px solid #ce6398;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1, h2 {
+    color: #333;
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Imagen */
+#rest-image {
+    width: auto;
+    height: 500px;
+}
