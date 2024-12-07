@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 8 - Decora tu Árbol</title>
+    <link rel="stylesheet" href="dia8.css">
+    <link rel="icon" href="../src/favicon.svg">
+</head>
+
+<body>
+    <button id="back-button"> < </button>
+
+    <div id="container">
+        <div id="tree-container">
+            <img src="../src/images/arbol/tronco.png" id="tronco">
+            <img src="../src/images/arbol/hojas.png" id="hojas">
+        </div>
+
+        <div id="color-picker-container">
+            <label for="color-picker">Elige el color de las hojas:</label>
+            <input type="color" id="color-picker" value="#00FF00">
+            <button id="confirm-button">Confirmar</button>
+        </div>
+
+        <div id="countdown-container">
+            <p id="countdown"></p>
+        </div>
+    </div>
+
+    <script src="dia8.js"></script>
+</body>
+
+</html>
