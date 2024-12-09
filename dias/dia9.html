@@ -1,16 +1,25 @@
-<html>
-    <body>
-        Error: Objects are not valid as a React child (found: object with keys {name, age}). If you meant to render a collection of children, use an array instead.
-    at throwOnInvalidObjectType (react-dom.development.js:14913:1)
-    at createChild (react-dom.development.js:15140:1)
-    at reconcileChildrenArray (react-dom.development.js:15414:1)
-    at reconcileChildFibers (react-dom.development.js:15709:1)
-    at beginWork (react-dom.development.js:20473:1)
-    at HTMLUnknownElement.callCallback (react-dom.development.js:3945:1)
-    at Object.invokeGuardedCallbackDev (react-dom.development.js:3994:1)
-    at invokeGuardedCallback (react-dom.development.js:4056:1)
-    at beginWork$1 (react-dom.development.js:23964:1)
-    at performUnitOfWork (react-dom.development.js:22776:1)
-
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 9</title>
+    <link rel="stylesheet" href="dia9.css">
+    <link rel="icon" href="../src/favicon.svg">
+</head>
+<body>
+    <button id="back-button"><</button>
+    <div id="content">
+        <h1 id="image-title">Título de la Imagen</h1>
+        <div id="image-container">
+            <img id="arrow-left" class="arrow" src="../src/images/dia9/flechaL.png" alt="Left Arrow">
+            <img id="main-image" src="../src/images/dia9/rec1.jpg" alt="Imagen Principal">
+            <img id="arrow-right" class="arrow" src="../src/images/dia9/flechaR.png" alt="Right Arrow">
+        </div>
+        <button id="action-button">
+            <img src="../src/images/dia9/recurso.png" alt="Recurso" id="button-icon">
+        </button>
+    </div>
+    <script src="dia9.js"></script>
+</body>
 </html>
