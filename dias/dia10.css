@@ -1,0 +1,85 @@
+/* Mantener el cuerpo general */
+body {
+    margin: 0;
+    background-color: #ffe6e6;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Botón de volver */
+#back-button {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    padding: 1% 2%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff99cc;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#back-button:hover {
+    background-color: #ff6699;
+}
+
+/* Contenedor */
+#content {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    background-color: transparent; /* El fondo no debe tapar la imagen */
+    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Imagen oculta */
+#hidden-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Capa de puntos */
+.grid-overlay {
+    display: grid;
+    grid-template-columns: repeat(53, 15px); /* Ajustar columnas */
+    grid-template-rows: repeat(53, 15px); /* Ajustar filas */
+    gap: 0; /* Sin espacio entre puntos */
+    width: 100%; /* Ajustar al tamaño del contenedor */
+    height: 100%; /* Ajustar al tamaño del contenedor */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(128, 128, 128, 0); /* Color gris semitransparente */
+}
+
+/* Puntos redondos */
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 10%; /* Redondear los puntos */
+    background-color: rgb(0, 0, 0); /* Color inicial */
+    border: 2px solid rgba(66, 66, 66, 0.5); /* Contorno visible */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.revealed {
+    background-color: transparent; /* El área se vuelve transparente */
+    opacity: 1; /* Mostrar completamente la imagen de atrás */
+    pointer-events: none; /* Evitar interacción adicional */
+}
