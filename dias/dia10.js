@@ -13,7 +13,7 @@ let storedData = JSON.parse(localStorage.getItem("dia10-data")) || {};
 if (!storedData[today]) {
     storedData[today] = {
         revealedDots: [],
-        image: `../src/images/dia10/Pos${Math.floor(Math.random() * 3) + 1}.png`,
+        image: `../src/images/dia10/pos${Math.floor(Math.random() * 3) + 1}.png`,
     };
 }
 
