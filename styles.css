@@ -16,8 +16,10 @@ body {
 h1 {
     margin-bottom: 20px; /* Separación entre el h1 y el p */
     font-size: 3em; /* Ajuste del tamaño de la fuente para el h1 */
+    font-weight: 700;
 }
 
 p {
     font-size: 1.2em; /* Ajuste del tamaño de la fuente para el p */
+    font-weight: 400;
 }
