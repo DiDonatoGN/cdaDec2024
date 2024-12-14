@@ -1,208 +1,22 @@
-* {
-    box-sizing: border-box;
+/* Establecer la fuente Inter para toda la página */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #AD0E0E; /* Fondo rojo */
+    color: white; /* Texto en color blanco */
     margin: 0;
     padding: 0;
-    
-}
-* {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #cb0f0f;
-    font-family: Arial, sans-serif;
-    color: #FFF;
-    padding: 10px;
-}
-
-.calendar {
-    text-align: center;
-    padding: 20px;
-    border-radius: 12px;
-    background-color: #ffcccc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 800px;
-}
-
-.calendar h1 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-#calendar-days {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Cinco días por fila */
-    gap: 10px;
-}
-
-.day {
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #ffc2c2;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
-    font-size: 1rem;
-    height: 80px; /* Altura fija */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.day.locked {
-    background-color: #d9b3b3;
-    cursor:not-allowed;
-}
-
-.day.unlocked {
-    background-color: #ff99cc;
-    cursor:pointer;
-}
-
-.day.unlocked:hover {
-    background-color: #ff80b3;
-    transform: scale(1.05);
-}
-
-.day.countdown {
-    background-color: #ffd1dc;
-    grid-column: span 5; /* Ocupa una fila completa */
-    height: 100px; /* Fijo y 25% más alto */
-    cursor: wait;
-}
-
-/* Estilo para los días desbloqueados sin abrir */
-.day.unlocked:not(.clicked) {
-    background-color: #ffa0c0; /* Rosa pastel claro */
-    box-shadow: 0 0 10px 5px rgba(255, 192, 203, 0.8);
-    animation: glow 1.5s infinite alternate;
-}
-
-/* Agregar imagen en lugar del número */
-.day.unlocked:not(.clicked)::before {
-    content: '';
-    background: url('./src/icons/exclamation.svg') no-repeat center;
-    background-size: 50%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-/* Estilo para los días desbloqueados ya accedidos */
-.day.unlocked.clicked {
-    background-color: #cc5d70; /* Rosa pastel más oscuro */
-    box-shadow: none;
-    color: #fff;
-    font-weight: bold;
-    box-shadow: 6px 6px 0px 0px rgba(0,0,0,0.61) inset;
--webkit-box-shadow: 6px 6px 0px 0px rgba(0,0,0,0.61) inset;
--moz-box-shadow: 6px 6px 0px 0px rgba(0,0,0,0.61) inset;
-
-}
-.day.unlocked.clicked{
-    font-size: 15px;
-}
-
-/* Animación de brillo */
-@keyframes glow {
-    from {
-        box-shadow: 0 0 5px 3px rgba(255, 192, 203, 0.5);
-    }
-    to {
-        box-shadow: 0 0 15px 7px rgba(255, 192, 203, 0.9);
-    }
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    z-index: 10;
-}
-
-.overlay.active {
-    display: flex;
-}
-
-.modal {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
-    font-size: 1rem;
-}
-
-/* Media Queries */
-@media (max-width: 600px) {
-    .calendar h1 {
-        font-size: 1.2rem;
-    }
-
-    #calendar-days {
-        grid-template-columns: repeat(2, 1fr); /* Dos días por fila */
-    }
-
-    .day {
-        padding: 10px;
-        font-size: 0.8rem;
-    }
-
-    .day.countdown {
-        grid-column: span 2; /* Ocupa una fila completa en pantallas pequeñas */
-    }
-
-    .modal {
-        font-size: 0.9rem;
-    }
-}
-
-/* Lista de días accedidos */
-.accessed-days {
-    display: none;
-}
-#album-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #ff99cc;
-    border: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 1000;
+    height: 100vh; /* Asegura que el contenido esté centrado en toda la ventana */
+    text-align: center; /* Centra el texto dentro de su contenedor */
 }
 
-#album-button:hover {
-    background-color: #ff80b3;
-    transform: scale(1.1);
+h1 {
+    margin-bottom: 20px; /* Separación entre el h1 y el p */
+    font-size: 3em; /* Ajuste del tamaño de la fuente para el h1 */
 }
 
-#album-button img {
-    width: 70%;
-    height: 70%;
+p {
+    font-size: 1.2em; /* Ajuste del tamaño de la fuente para el p */
 }
