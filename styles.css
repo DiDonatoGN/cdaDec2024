@@ -10,6 +10,7 @@ body {
     align-items: center;
     height: 100vh; /* Asegura que el contenido esté centrado en toda la ventana */
     text-align: center; /* Centra el texto dentro de su contenedor */
+    flex-direction: column; /* Apila los elementos verticalmente */
 }
 
 h1 {
